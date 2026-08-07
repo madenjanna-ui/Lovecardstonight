@@ -788,3 +788,101 @@ BUTTON
     margin-top:auto;
 
 }
+/* ===========================
+DECK
+=========================== */
+
+#deck{
+
+    position:relative;
+
+    width:220px;
+
+    height:320px;
+
+    margin:40px auto;
+
+}
+
+.deckCard{
+
+    position:absolute;
+
+    width:220px;
+
+    height:320px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #5b3fd1,
+        #24164d
+    );
+
+    border:2px solid rgba(255,255,255,.12);
+
+}
+
+.deckCard:nth-child(1){
+
+    transform:
+    rotate(-8deg)
+    translate(-10px,8px);
+
+}
+
+.deckCard:nth-child(2){
+
+    transform:
+    rotate(5deg)
+    translate(8px,-5px);
+
+}
+
+.deckCard:nth-child(3){
+
+    transform:
+    rotate(-3deg)
+    translate(-4px,3px);
+
+}
+
+.deckMain{
+
+    position:absolute;
+
+    width:220px;
+
+    height:320px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8B5CF6,
+        #4F46E5
+    );
+
+    border:2px solid rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45);
+
+}
+
+.deckMain::before{
+
+    content:"🌙";
+
+    font-size:90px;
+
+}
