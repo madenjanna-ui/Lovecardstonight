@@ -58,19 +58,6 @@ function showScreen(screen){
 
 }
 
-// =========================
-
-function updateCounter(){
-
-    const left = cardsLeftCount(currentRole);
-
-     cardsLeftLabel.innerHTML = `
-        Осталось
-        <br>
-        ${left} из 18
-    `;
-
-}
 
 // =========================
 
@@ -102,7 +89,9 @@ openButton.onclick = ()=>{
     loginError.textContent="";
 
     codeInput.value="";
-    bgMusic.play();
+if (typeof bgMusic !== "undefined") {
+    bgMusic.play().catch(() => {});
+}
     
     showScreen(roleScreen);
 
