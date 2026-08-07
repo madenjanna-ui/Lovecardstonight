@@ -36,11 +36,11 @@ document.getElementById("restartButton");
 const cardsLeft =
 document.getElementById("cardsLeft");
 
-const cardTitle =
-document.getElementById("cardTitle");
-
 const cardText =
 document.getElementById("cardText");
+
+const performer =
+document.getElementById("performer");
 
 // =========================
 
@@ -136,11 +136,11 @@ drawButton.onclick = ()=>{
 
     }
 
-    cardTitle.textContent =
-    currentCard.title;
+    performer.textContent =
+currentCard.performer;
 
-    cardText.textContent =
-    currentCard.text;
+cardText.textContent =
+currentCard.text;
 
     showScreen(cardScreen);
 
