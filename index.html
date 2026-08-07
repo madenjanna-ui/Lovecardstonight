@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>One Card Tonight 🌙</title>
+
+<meta name="theme-color" content="#111827">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Фон -->
+<div id="background"></div>
+
+<!-- Частицы -->
+<div id="particles"></div>
+
+<!-- ========================= -->
+<!-- ЭКРАН ВВОДА КОДА -->
+<!-- ========================= -->
+
+<section id="loginScreen" class="screen active">
+
+    <div class="glass">
+
+        <h1 class="logo">
+            🌙
+            <span>One Card Tonight</span>
+        </h1>
+
+        <p class="subtitle">
+            Введите код
+        </p>
+
+        <input
+            id="codeInput"
+            class="input"
+            type="password"
+            maxlength="8"
+            placeholder="••••••••"
+            autocomplete="off">
+
+        <button id="openButton" class="button">
+            Открыть
+        </button>
+
+        <p id="loginError" class="error"></p>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ВЫБОР -->
+<!-- ========================= -->
+
+<section id="roleScreen" class="screen">
+
+    <div class="glass">
+
+        <h2>
+
+            Кто открывает карту?
+
+        </h2>
+
+        <button
+            class="button roleButton"
+            data-role="male">
+
+            👨 Он
+
+        </button>
+
+        <button
+            class="button roleButton"
+            data-role="female">
+
+            👩 Она
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- КОЛОДА -->
+<!-- ========================= -->
+
+<section id="deckScreen" class="screen">
+
+    <div class="glass">
+
+        <div id="cardsLeft" class="counter">
+
+            Осталось
+            <br>
+
+            18 из 18
+
+        </div>
+
+        <div id="deck">
+
+            <img
+                src="card-back.png"
+                alt="Колода">
+
+        </div>
+
+        <button
+            id="drawButton"
+            class="button">
+
+            Открыть карту
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- КАРТА -->
+<!-- ========================= -->
+
+<section id="cardScreen" class="screen">
+
+    <div id="card" class="card">
+
+        <div class="cardFront">
+
+            <div id="cardTitle"
+                 class="cardTitle">
+
+                Карта
+
+            </div>
+
+            <div id="cardText"
+                 class="cardText">
+
+            </div>
+
+            <button
+                id="completeButton"
+                class="button">
+
+                ✔ Выполнено
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ПРОЩАНИЕ -->
+<!-- ========================= -->
+
+<section id="byeScreen" class="screen">
+
+    <div class="glass">
+
+        <h1>
+
+            ❤️
+
+        </h1>
+
+        <h2>
+
+            Спасибо!
+
+        </h2>
+
+        <p>
+
+            До новой встречи 👋
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ПОБЕДА -->
+<!-- ========================= -->
+
+<section id="finishScreen" class="screen">
+
+    <div class="glass">
+
+        <h1>
+
+            🏆
+
+        </h1>
+
+        <h2>
+
+            Все карты открыты
+
+        </h2>
+
+        <p>
+
+            Начать новую колоду?
+
+        </p>
+
+        <button
+            id="restartButton"
+            class="button">
+
+            Новая колода
+
+        </button>
+
+    </div>
+
+</section>
+
+<script src="cards.js"></script>
+<script src="storage.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
