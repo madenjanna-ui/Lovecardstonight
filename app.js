@@ -74,9 +74,15 @@ function updateCounter(){
 
 // =========================
 
-function cardsLeftCount(role){
+function updateCounter(){
 
-    return cardsLeft(role);
+    const left = 18 - getCompleted(currentRole).length;
+
+    cardsLeftLabel.innerHTML = `
+        Осталось
+        <br>
+        ${left} из 18
+    `;
 
 }
 
