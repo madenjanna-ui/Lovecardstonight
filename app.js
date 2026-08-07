@@ -102,7 +102,8 @@ openButton.onclick = ()=>{
     loginError.textContent="";
 
     codeInput.value="";
-
+    bgMusic.play();
+    
     showScreen(roleScreen);
 
 };
@@ -130,7 +131,10 @@ document
 // =========================
 
 drawButton.onclick = ()=>{
-
+    
+shuffleSound.currentTime = 0;
+shuffleSound.play();
+    
     currentCard =
     getRandomCard(currentRole);
 
@@ -147,6 +151,9 @@ currentCard.performer;
 
 cardText.textContent =
 currentCard.text;
+
+    drawSound.currentTime = 0;
+drawSound.play();
 
     showScreen(cardScreen);
 
@@ -165,7 +172,10 @@ completeButton.onclick = ()=>{
         currentCard.id
 
     );
-
+    
+finishSound.currentTime = 0;
+finishSound.play();
+    
     showScreen(byeScreen);
 
     setTimeout(()=>{
