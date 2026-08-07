@@ -33,7 +33,7 @@ document.getElementById("completeButton");
 const restartButton =
 document.getElementById("restartButton");
 
-const cardsLeft =
+const cardsLeftLabel =
 document.getElementById("cardsLeft");
 
 const cardText =
@@ -64,7 +64,7 @@ function updateCounter(){
 
     const left = cardsLeftCount(currentRole);
 
-    cardsLeft.innerHTML = `
+     cardsLeftLabel.innerHTML = `
         Осталось
         <br>
         ${left} из 18
